@@ -6,6 +6,8 @@ import API_KEY from "../apiKey";
 
 import { getLocation } from "../api/api";
 
+import icon from "../assets/satellite.png";
+
 const Leaflet = () => {
   const [coordinates, setCoordinates] = useState({ latitude: 0, longitude: 0 });
 
@@ -26,7 +28,7 @@ const Leaflet = () => {
 
     let interval = setInterval(() => {
       fetchObject();
-    }, 2000);
+    }, 1000);
     return () => {
       clearInterval(interval);
     };
@@ -51,6 +53,10 @@ function Map({ coordinates }) {
       <MarkerF
         position={{ lat: coordinates.latitude, lng: coordinates.longitude }}
         title="ISS"
+        icon={{
+          url: icon,
+          scale: 0.05,
+        }}
       />
     </GoogleMap>
   );
