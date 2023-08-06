@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap");
+
+.bottom-tab {
+  height: 5vh;
+  color: black;
+  position: absolute;
+  bottom: 80px;
+  left: 45vw;
+}
+
+.para {
+  font-family: "Handjet", cursive, sans-serif;
+  font-size: 3em;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: black;
+}
