@@ -2,12 +2,11 @@ import React, { useMemo, useState, useEffect } from "react";
 
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 
-import API_KEY from "../../apiKey";
-
 import { getLocation } from "../../api/api";
 
 import icon from "../../assets/satellite.png";
 
+const API_KEY = process.env.REACT_APP_API_KEY;
 const Leaflet = () => {
   const [coordinates, setCoordinates] = useState({ latitude: 0, longitude: 0 });
 
